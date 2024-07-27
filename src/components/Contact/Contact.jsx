@@ -1,11 +1,11 @@
-// import React from 'react'
+// import s from './Contact.module.css'
 
 const Contact = ({ contactInfo: {id, name, number}, onDelete}) => {
     return (
     <>
         <span>{name}:</span>
             <span>{number}</span>
-            <button>Delete</button>
+            <button onClick={()=>onDelete(id)} className='onDelete'>Delete</button>
     </>
   )
 }
