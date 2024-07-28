@@ -3,6 +3,7 @@ import './App.css'
 import { nanoid } from 'nanoid';
 import ContactList from './ContactList/ContactList';
 import SearchBox from './SearchBox/SearchBox';
+import ContactForm from './ContactForm/ContactForm';
 
 const App = () => {
   const [contacts, setContacts] = useState(() => {
@@ -32,8 +33,8 @@ const App = () => {
     });
   };
 
-  const handleChange = (e) => {
-    setFilter(e.target.value);
+  const handleChange = (event) => {
+    setFilter(event.target.value);
   };
 
   // const filteredContacts = contacts.filter(contact => contact.name.toLoverCase().includes(filter.toLowerCase())
@@ -42,6 +43,7 @@ const App = () => {
   return (
     <>
       <h1>Phonebook</h1>
+      <ContactForm onSubmit={addContact} />
       <SearchBox value={filter} onChange={handleChange} />
       <ContactList contacts={contacts} onDelete={deleteContact} />
     </>

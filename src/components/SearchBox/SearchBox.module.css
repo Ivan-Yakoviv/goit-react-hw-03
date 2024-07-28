@@ -1,0 +1,17 @@
+.searchBox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.searchLabel {
+  display: flex;
+}
+
+.search {
+  display: flex;
+  padding: 2px 20px 2px 8px;
+  font-size: 18px;
+  background-color: #fff;
+  color: black;
+}
