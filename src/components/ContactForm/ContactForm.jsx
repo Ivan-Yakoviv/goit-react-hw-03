@@ -35,12 +35,12 @@ const ContactForm = ({onSubmit}) => {
       {({ isSubmitting }) => (
         <Form className={s.contactForm}>
           <div className={s.formItem}>
-            <label htmlFor={nameId}>Name</label>
+            <label className={s.label} htmlFor={nameId}>Name</label>
             <Field className={s.input} name="name" type="text" placeholder="Enter name" />
             <ErrorMessage name="name" component="div" className={s.error} />
           </div>
           <div className={s.formItem}>
-            <label htmlFor={numberId}>Number</label>
+            <label className={s.label} htmlFor={numberId}>Number</label>
             <Field className={s.input} name="number" type="text" placeholder="Enter number" />
             <ErrorMessage name="number" component="div" className={s.error} />
           </div>
