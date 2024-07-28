@@ -38,15 +38,15 @@ const App = () => {
     setFilter(event.target.value);
   };
 
-  // const filteredContacts = contacts.filter(contact => contact.name.toLoverCase().includes(filter.toLowerCase())
-  // );
+  const filteredContacts = contacts.filter(contact => contact.name.toLowerCase().includes(filter.toLowerCase())
+  );
 
   return (
     <>
       <h1>Phonebook</h1>
       <ContactForm onSubmit={addContact} />
       <SearchBox value={filter} onChange={handleChange} />
-      <ContactList contacts={contacts} onDelete={deleteContact} />
+      <ContactList contacts={filteredContacts} onDelete={deleteContact} />
     </>
   )
 }
